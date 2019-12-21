@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--parallel = "methods "  多线程是方法级别的 ；thread-count = "2"  线程数是2个-->
+<suite  name ="thread"   parallel = "methods " thread-count = "2">
+    <test name  = "demo1">
+        <classes>
+            <class   name ="com.course.testng.multiThread.MultiThreadOnXMl" />
+        </classes>
+    </test>
+
+</suite>

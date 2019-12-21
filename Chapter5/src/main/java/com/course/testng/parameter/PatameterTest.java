@@ -9,6 +9,6 @@ public class PatameterTest {
     @Test
     @Parameters({"name","age"})
     public void paremTest(String name ,int age){
-        System.out.println("name = "+name +"age = "+age);
+        System.out.println("name = "+name +"  ;  age = "+age);
     }
 }

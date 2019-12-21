@@ -2,6 +2,7 @@
 <suite name = "parameter">
     <test name = "param">
         <classes>
+<!--        通过xml文件参数化    -->
             <parameter name = "name" value ="zhangsan"/>
             <parameter name = "age" value ="10"/>
 
