@@ -18,12 +18,12 @@ public class DataProviderTest {
 
     @DataProvider(name = "data")
     public Object[][] providerData() {
-        Object[][] o = new Object[][]{
+        Object[][] ob = new Object[][]{
                 {"zhangsan", 10},
                 {"lisi", 20},
                 {"wangwu", 30},
         };
-        return o;
+        return ob;
     }
 
     @Test(dataProvider = "methodData")

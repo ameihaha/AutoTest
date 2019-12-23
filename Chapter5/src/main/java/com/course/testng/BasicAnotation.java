@@ -6,6 +6,7 @@ public class BasicAnotation {
     //最基本的注解，用来把方法标记为测试的一部分
     @Test
     public void  testCase1(){
+        System.out.printf("Thread Id1 : %s%n" , Thread.currentThread().getId());
         System.out.println("testCase1 这是测试用例1 ");
 
     }
