@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Chapter5" />
         <module name="Chapter6" />
+        <module name="Chapter5" />
       </profile>
       <profile name="Annotation profile for Chapter5" enabled="true">
         <sourceOutputDir name="Chapter5/target/generated-sources/annotations" />
@@ -17,9 +17,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
-      <module name="AutoTest" target="1.5" />
-      <module name="Chapter5" target="1.5" />
-      <module name="Chapter6" target="1.5" />
+      <module name="AutoTest" target="11.0.5" />
+      <module name="Chapter5" target="11.0.5" />
+      <module name="Chapter6" target="11.0.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -2,6 +2,9 @@ package com.course.testng.groups;
 
 import org.testng.annotations.Test;
 
+/**
+ * author: amei
+ */
 @Test(groups = "stu")
 public class GroupsOnClass1 {
 
