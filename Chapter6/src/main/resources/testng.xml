@@ -13,7 +13,7 @@
             </methods>
         </classes>
     </test>
-
+<!--添加监听器，监听测试数据，测试报告需要1、监听器  2、pom.xml三个依赖-->
     <listeners>
 <!--        <listener class-name = "com.vimalselvam.testng.listener.ExtentTestNgFormatter"/>-->
         <listener class-name = "com.tester.extend.demo.ExtentTestNGIReporterListenerOld"/>
