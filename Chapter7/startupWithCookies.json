@@ -7,8 +7,7 @@
     },
     "response": {
       "cookies":{
-        "login": "true-amei",
-        "status": "10000"
+        "login": "true-amei"
       },
       "text": "恭喜你获得cookies信息成功"
     }
