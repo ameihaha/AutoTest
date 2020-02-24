@@ -19,7 +19,7 @@
       "uri": "/get/with/cookies",
       "method": "get",
       "cookies": {
-        "login": "true"
+        "login": "true-amei"
       }
     },
     "response": {
