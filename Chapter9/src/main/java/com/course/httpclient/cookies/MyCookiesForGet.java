@@ -43,9 +43,9 @@ public class MyCookiesForGet {
         result = EntityUtils.toString(response.getEntity(),"utf-8");
         System.out.println(result);
 
-
         //获取cookies信息
         this.store =  client.getCookieStore();
+
         List<Cookie> cookieList =  store.getCookies();
 
         for (Cookie  cookie : cookieList){

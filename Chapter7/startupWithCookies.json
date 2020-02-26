@@ -7,7 +7,7 @@
     },
     "response": {
       "cookies":{
-        "login": "true-amei"
+        "login": "true"
       },
       "text": "恭喜你获得cookies信息成功"
     }
@@ -19,7 +19,7 @@
       "uri": "/get/with/cookies",
       "method": "get",
       "cookies": {
-        "login": "true-amei"
+        "login": "true"
       }
     },
     "response": {
