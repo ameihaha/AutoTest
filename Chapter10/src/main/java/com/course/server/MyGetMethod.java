@@ -1,9 +1,6 @@
 package com.course.server;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -41,6 +38,15 @@ public class MyGetMethod {
 
         return "携带cookies信息访问成功 ！";
     }
+
+    /**
+     * 需要携带参数的get请求
+     * 第一种实现方式 URL：key=value&key=value
+     * 模拟获取商品列表
+     * @param start
+     * @param end
+     * @return
+     */
     @RequestMapping(value = "/get/with/param",method = RequestMethod.GET)
     public Map<String, Integer> getList(@RequestParam Integer start, @RequestParam Integer end) {
 
@@ -51,6 +57,21 @@ public class MyGetMethod {
         myList.put("火腿", 20);
         return  myList;
 
+    }
+
+    /**
+     * 第二种需要带参数的get请求
+     * URL：IP：port/get/with/param/10/20
+     */
+    @RequestMapping(value = "/get/with/param/{start}/{end}")
+    public Map<String,Integer> myGetList(@PathVariable Integer start,@PathVariable Integer end){
+
+        Map<String ,Integer> myList = new HashMap<>();
+
+        myList.put("面包", 30);
+        myList.put("牛奶", 10);
+        myList.put("火腿", 20);
+        return  myList;
 
     }
 
