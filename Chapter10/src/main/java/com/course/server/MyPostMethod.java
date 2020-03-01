@@ -41,10 +41,10 @@ public class MyPostMethod {
         Cookie[]  cookies = request.getCookies();
         //验证cookies是否合法
         for (Cookie cookie:cookies){
-            if (cookie.getName() =="login"
-                    &&cookie.getValue()=="true"
-                    &&user.getUserName()=="amei"
-                    &&user.getPassWord()=="123456"){
+            if (cookie.getName().equals("login")
+                    &&cookie.getValue().equals("true")
+                    &&user.getUserName().equals("amei")
+                    &&user.getPassWord().equals("123456")){
                 user1 = new User();
                 user1.setName("lisi");
                 user1.setAge("18");
