@@ -37,6 +37,32 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${swagger.version}</version>
         </dependency>
+
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.14</version>
+        </dependency>
     </dependencies>
 
+<!--解决maven编译报错Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+<!--                <configuration>-->
+<!--                    <verbose>true</verbose>-->
+<!--                    <fork>true</fork>-->
+<!--                    <executable>${JAVA8_HOME}/bin/javac</executable>-->
+<!--                </configuration>-->
+            </plugin>
+        </plugins>
+    </build>
 </project>
