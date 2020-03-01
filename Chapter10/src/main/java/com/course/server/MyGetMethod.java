@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Objects;
 
 @RestController
-@Api(value = "/",description = "amei的get方法")
+@Api(value = "/",description = "amei的get方法")//通过swagger接口生成器生成接口文档，Api作用在类上，ApiOperation作用在方法上
 public class MyGetMethod {
 
     @RequestMapping(value = "/getCookies", method = RequestMethod.GET)
