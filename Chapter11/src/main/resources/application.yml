@@ -1,0 +1,19 @@
+sever:
+ port: 8899
+
+logging:
+  file: mylog.log
+    path: logs
+
+spring:
+  application:
+    name: myInterfaceTest
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc://127.0.0.1:3306/course
+    username: admin
+    password: 123456
+mybatis:
+  type-aliases-package: com.course.model
+  mapper-locations:
+    - mapper/*
