@@ -6,17 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Chapter5" />
-        <module name="Chapter10" />
+        <module name="Chapter12" />
         <module name="Chapter11" />
+        <module name="Chapter10" />
         <module name="Chapter9" />
         <module name="Chapter6" />
+        <module name="Chapter5" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
       <module name="AutoTest" target="1.8" />
       <module name="Chapter10" target="1.8" />
       <module name="Chapter11" target="1.8" />
+      <module name="Chapter12" target="1.8" />
       <module name="Chapter5" target="11.0.5" />
       <module name="Chapter6" target="11.0.5" />
       <module name="Chapter9" target="11.0.5" />
@@ -26,6 +28,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Chapter10" options="-parameters" />
       <module name="Chapter11" options="-parameters" />
+      <module name="Chapter12" options="-parameters" />
     </option>
   </component>
 </project>

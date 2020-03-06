@@ -5,6 +5,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.log4j.Log4j;
 import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @Log4j
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class Demo {
 
     //获取执行SQL语句对象
+    @Autowired
     private SqlSessionTemplate template;
 
     @RequestMapping(value = "/getUserCount",method = RequestMethod.GET)
