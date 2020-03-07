@@ -16,7 +16,7 @@ import javax.annotation.Resource;
 @Api(value = "v1",description = "第一个版本的demo")
 @RequestMapping("v1")
 public class UserController {
-    
+
     @Resource
     private UserService userservice;
 

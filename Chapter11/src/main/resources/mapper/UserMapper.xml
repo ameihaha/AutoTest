@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.course">
+<mapper namespace="com.course.mapper.UserMapper">
 <!--    resultType是返回的查询结果类型-->
-    <select id ="getUserCount" resultType="Integer" >
+    <select id ="getUserCount" resultType="java.lang.Integer" >
         select count(*) from user;
     </select>
 
