@@ -1,14 +1,17 @@
 package com.course.service;
 
 
-import com.course.mapper.Mapper;
+import com.course.mapper.UserMapper;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 @Service
 public class UserService {
 
-    Mapper mapper;
-    public User  getUserCount(){
-
+    @Resource
+    private UserMapper mapper;
+    public int   getUserCount(){
+        return mapper.getUserCount();
     }
 }

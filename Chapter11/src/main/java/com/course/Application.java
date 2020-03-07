@@ -10,7 +10,7 @@ import javax.annotation.PreDestroy;
 import javax.swing.*;
 
 @EnableScheduling//@EnableScheduling注解 进行定时任务
-@MapperScan("com.course.model")
+@MapperScan("com.course.mapper")
 @SpringBootApplication
 public class Application {
     private  static ConfigurableApplicationContext context;
