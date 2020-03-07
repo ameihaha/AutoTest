@@ -5,8 +5,7 @@
 <mapper namespace="com.course.mapper.UserMapper">
 <!--    resultType是返回的查询结果类型-->
     <select id ="getUserCount" resultType="java.lang.Integer" >
-        select count(*) from user;
+            select count(*) from user;
     </select>
-
 
 </mapper>
