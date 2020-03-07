@@ -21,7 +21,10 @@ public class Demo {
     @RequestMapping(value = "/getUserCount",method = RequestMethod.GET)
     @ApiOperation(value = "可以获取到用户数",httpMethod = "GET")
     public  int getUserCount(){
-        return  template.selectOne("getUserCount"); //这里匹配resources/mapper/mysql.xml里的select标签的id
+        System.out.println("啊啊啊啊啊啊啊啊啊");
+       int  result = template.selectOne("getUserCount");
+        System.out.println("啊啊啊啊啊啊啊啊啊啊啊啊+   "+ result);
+        return  result; //这里匹配resources/mapper/mysql.xml里的select标签的id
 
     }
     @RequestMapping(value = "/addUser",method = RequestMethod.POST)

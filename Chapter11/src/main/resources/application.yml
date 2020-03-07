@@ -1,19 +1,40 @@
-sever:
- port: 8899
-
+#server:
+#  port: 8899
+#
+#logging:
+#  path: logs
+#  file: mylog.log
+##  file: mylog.log
+##    path: logs
+#
+#spring:
+##  application:
+##    name: myTest
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1:3306/course
+#    username: root
+#    password: 123456
+#mybatis:
+#  type-aliases-package: com.course.model
+#  mapper-locations:
+#         classpath: mapper/*.xml
+##    - mapper/*
+#
+#
 logging:
   file: mylog.log
-    path: logs
-
+  path: logs
+mybatis:
+  mapper-locations:
+    classpath: mapper/*.xml
+  type-aliases-package: com.course.model
+server:
+  port: 8899
 spring:
-  application:
-    name: myInterfaceTest
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc://127.0.0.1:3306/course
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "jdbc:mysql://127.0.0.1:3306/course"
     username: root
     password: 123456
-mybatis:
-  type-aliases-package: com.course.model
-  mapper-locations:
-    - mapper/*
+
