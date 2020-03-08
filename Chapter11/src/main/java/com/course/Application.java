@@ -7,7 +7,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import javax.annotation.PreDestroy;
-import javax.swing.*;
 
 @EnableScheduling//@EnableScheduling注解 进行定时任务
 @MapperScan("com.course.mapper")
