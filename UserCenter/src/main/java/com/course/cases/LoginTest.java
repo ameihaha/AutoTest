@@ -37,6 +37,7 @@ public class LoginTest {
 
         //接收返回结果
         HttpResponse httpResponse = TestConfig.defaultHttpClient.execute(post);
+
         String result = EntityUtils.toString(httpResponse.getEntity(),"utf-8");
         TestConfig.store = TestConfig.defaultHttpClient.getCookieStore();
         return result;
@@ -57,7 +58,7 @@ public class LoginTest {
         TestConfig.defaultHttpClient = new DefaultHttpClient();
     }
     @Test(groups = "loginTrue",description = "登录成功接口测试")
-    public  void loginTest() throws IOException {
+    public  void loginTrue() throws IOException {
         SqlSession session = DatabaseUtil.getSqlSession();
         LoginCase loginCase = session.selectOne("loginCase",1);
 

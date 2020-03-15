@@ -48,6 +48,7 @@ public class GetUserInfoListTest {
     @Test(dependsOnGroups = "loginTrue",description = "获取性别男的用户信息")
     public void getUserListInfo() throws IOException {
         SqlSession session = DatabaseUtil.getSqlSession();
+        //预期结果：执行的SQL语句的查询结果
         GetUserListCase getUserListCase = session.selectOne("getUserListCase",1);
         //发送请求获取实际结果
         JSONArray resultJson = getJsonResult(getUserListCase);
