@@ -35,8 +35,9 @@ public class GetUserInfoTest {
         //查询出的User对象放到useList中
         useList.add(user);
         JSONArray jsonArray = new JSONArray(useList);
-
-        Assert.assertEquals(jsonArray,resultJson);
+        JSONArray jsonArray1 = new JSONArray(resultJson.getString(0));
+        Assert.assertEquals(jsonArray.toString(),jsonArray1.toString());
+//        Assert.assertEquals(jsonArray,resultJson);
 
     }
 
