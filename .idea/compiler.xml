@@ -9,9 +9,9 @@
         <module name="Chapter11" />
         <module name="Chapter10" />
         <module name="UserCenter" />
-        <module name="Chapter9" />
         <module name="Chapter6" />
         <module name="Chapter5" />
+        <module name="httpclientTest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
@@ -20,7 +20,7 @@
       <module name="Chapter11" target="1.8" />
       <module name="Chapter5" target="11.0.5" />
       <module name="Chapter6" target="11.0.5" />
-      <module name="Chapter9" target="11.0.5" />
+      <module name="httpclientTest" target="11.0.5" />
       <module name="UserCenter" target="1.8" />
     </bytecodeTargetLevel>
   </component>

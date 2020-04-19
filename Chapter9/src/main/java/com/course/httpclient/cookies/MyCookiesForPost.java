@@ -49,7 +49,7 @@ public class MyCookiesForPost {
 
         HttpResponse response = client.execute(get);
         result = EntityUtils.toString(response.getEntity(), "utf-8");
-        System.out.println(result);
+        System.out.println("￥￥￥￥￥￥"+result);
 
         //获取cookies信息
         this.store = client.getCookieStore();
@@ -57,12 +57,14 @@ public class MyCookiesForPost {
         //get information about cookies
         List<Cookie> cookieList = store.getCookies();
         for (Cookie cookie : cookieList) {
+            System.out.println(cookie);
             String name = cookie.getName();
             String value = cookie.getValue();
             System.out.println("cookieName = " + name + "; cookieValue = " + value);
         }
     }
-    @Test(dependsOnMethods = {"testGetCookies"})
+//    @Test(dependsOnMethods = {"testGetCookies"})
+    @Test
     public void testPostMethod () throws IOException {
         String uri = bundle.getString("test.post.with.cookies");
         //测试地址
@@ -70,16 +72,20 @@ public class MyCookiesForPost {
         //声明一个client对象，用来进行方法的执行
         DefaultHttpClient client = new DefaultHttpClient();
 
+
+
         //声明一个方法，这个方法就是post方法
         HttpPost post =  new HttpPost(testUrl);
 
         //添加参数
         JSONObject param = new JSONObject();
-        param.put("name","huhansan");
-        param.put("age","18");
+//        param.put("name","huhansan");
+//        param.put("age","18");
+        param.put("username","urban123");
+        param.put("password","urban1120_");
 
         //设置请求头信息
-        post.setHeader("content-type","application-json");
+        post.setHeader("content-type","application/json;charset=utf-8");
         //将参数信息添加到方法中
         StringEntity entity =  new StringEntity(param.toString(), "utf-8");
         //将post方法绑定entity
@@ -99,10 +105,10 @@ public class MyCookiesForPost {
 
         //具体判断返回结果的值
         //获取到json结果的value值
-        String success = (String) resultJson.get("huhansan");
-        String status = (String) resultJson.get("status");
-        Assert.assertEquals("success",success);//期望结果，实际结果
-        Assert.assertEquals("1",status);
+        String message = (String) resultJson.get("message");
+        int code = (int) resultJson.get("code");
+        Assert.assertEquals("success",message);//期望结果，实际结果
+        Assert.assertEquals(200,code);
     }
 }
 
