@@ -98,7 +98,6 @@ public class MyCookiesForPost {
         //获取响应结果
         String result = EntityUtils.toString(response.getEntity(),"utf-8");
         System.out.println("********** amei "+result);
-
         /*处理结果，返回结果是否符合预期*/
         //将返回的结果字符串传化为json对象
         JSONObject resultJson = new JSONObject(result);

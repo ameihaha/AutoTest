@@ -1,0 +1,146 @@
+[
+  {
+    "description": "用户认证信息获取post",
+    "request": {
+      "uri": "/api/author/login",
+      "method": "post",
+      "json": {
+        "user": "author",
+        "password": "123"
+      }
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "authorization": "12323"
+
+      }
+    }
+  },
+
+  {
+    "description": "旅客Source接口get",
+    "request": {
+      "uri": "/api/passenger/source-code",
+      "method": "get"
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "source": ["PEK","PKX"]
+
+      }
+    }
+  },
+  {
+    "description": "航班Source接口get",
+    "request": {
+      "uri": "/api/mart/flight/source-code",
+      "method": "get"
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "airport": ["QD","JN"]
+      }
+    }
+  },
+  {
+    "description": "旅客实时数据API_passengerCertificate",
+    "request": {
+      "uri": "/api/passenger/real-time/passengerCertificate",
+      "method": "post",
+      "json": {
+        "updateTime": "201912131215",
+        "source": "PEK"
+      }
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "reasonCd": "flight_01",
+        "total": 11,
+        "data": {
+          "flgtId": "CA-288-20191212244533-D",
+          "flgtNo": "CA-00001",
+          "originalTimestamp": 202007012045
+        }
+      }
+    }
+  },
+
+
+  {
+  "description": "旅客实时数据API_passengerBoarding",
+  "request": {
+    "uri": "/api/passenger/real-time/passengerBoarding",
+    "method": "post",
+    "json": {
+      "updateTime": "201912131215",
+      "source": "PEK"
+    }
+  },
+  "response": {
+    "status": 200,
+    "json": {
+      "reasonCd": "passenger_02",
+      "total": 13,
+      "data": {
+        "gfid": "CA-278-20191212244533-D",
+        "boardingNo": "00002",
+        "originalTimestamp": 202007022045
+      }
+    }
+  }
+},
+
+  {
+    "description": "航班实时数据API_flightInfo",
+    "request": {
+      "uri": "/api/mart/flight/flightInfo",
+      "method": "post",
+      "json": {
+        "airport": "PEK"
+      }
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "reasonCd": "flight_02",
+        "total": 12,
+        "data": {
+          "flgtId": "CA-233-20191212244533-D",
+          "flgtNo": "CA-00001"
+
+        }
+      }
+    }
+  },
+
+
+  {
+    "description": "航班实时数据API_carryLoad",
+    "request": {
+      "uri": "/api/mart/flight/carryLoad",
+      "method": "post",
+      "json": {
+        "airport": "SHANDONG"
+      }
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "reasonCd": "flight_02",
+        "total": 12,
+        "data": {
+          "flgtId": "CA-288-20191212244533-D",
+          "flgtNo": "CA-00002"
+
+        }
+      }
+    }
+  }
+
+
+
+]
