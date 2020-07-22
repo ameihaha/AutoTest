@@ -58,12 +58,11 @@
     "response": {
       "status": 200,
       "json": {
-        "reasonCd": "flight_01",
         "total": 11,
         "data": {
           "flgtId": "CA-288-20191212244533-D",
           "flgtNo": "CA-00001",
-          "originalTimestamp": 202007012045
+          "originalTimestamp": 1593618848
         }
       }
     }
@@ -83,7 +82,6 @@
   "response": {
     "status": 200,
     "json": {
-      "reasonCd": "passenger_02",
       "total": 13,
       "data": {
         "gfid": "CA-278-20191212244533-D",
@@ -100,13 +98,16 @@
       "uri": "/api/mart/flight/flightInfo",
       "method": "post",
       "json": {
+        "startTime": "201912131215" ,
+        "startTime": "${@datatime}",
+        "endTime": "201912131216",
+
         "airport": "PEK"
       }
     },
     "response": {
       "status": 200,
       "json": {
-        "reasonCd": "flight_02",
         "total": 12,
         "data": {
           "flgtId": "CA-233-20191212244533-D",
@@ -124,13 +125,13 @@
       "uri": "/api/mart/flight/carryLoad",
       "method": "post",
       "json": {
+      	"updateTime": "201912131215",
         "airport": "SHANDONG"
       }
     },
     "response": {
       "status": 200,
       "json": {
-        "reasonCd": "flight_02",
         "total": 12,
         "data": {
           "flgtId": "CA-288-20191212244533-D",
@@ -140,7 +141,5 @@
       }
     }
   }
-
-
 
 ]

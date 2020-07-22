@@ -1,0 +1,70 @@
+02 Jul 2020 16:11:50 [nioEventLoopGroup-3-3] INFO  Request received:
+
+POST /api/mart/flight/flightInfo HTTP/1.1
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.26.1
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: d4e04070-318e-4628-86cc-7e13f69dc003
+Host: 10.241.241.30:8888
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 110
+
+{
+        "startTime": "201912131215" ,
+        "endTime": "201912131216",
+
+        "airport": "PEK"
+      }
+
+02 Jul 2020 16:11:50 [nioEventLoopGroup-3-3] INFO  Response return:
+
+HTTP/1.1 200
+Content-Length: 76
+Content-Type: application/json; charset=utf-8
+
+{"total":12,"data":{"flgtId":"CA-233-20191212244533-D","flgtNo":"CA-00001"}}
+
+
+{"flgtNo":"123","updateTime":"202007012109","flgtId":"888}
+
+
+./kafka-console-consumer.sh --new-consumer --topic 738ec27a-36be-4e09-a7e7-0ac6da18f602 --bootstrap-server 10.241.241.22:9092,10.241.241.23:9092,10.241.241.24:9092 --from-beginning
+
+
+
+mysql -h mysql-quanxian.cityos.local -u g67833e9393654cd9j0iyni0r -p
+
+
+export HADOOP_USER_NAME=hbase
+
+
+ 2020/07/03
+
+o1  Kafka Adapter数据采集  kafka(新建表)1/ mysql （新建表）1/  habase(新建表)1  (已有表)1/   7月6日计划 已建表测试
+o2、 API数据采集(API 请求、API请求组、任务编排&运行)  kafka(新建表)1/ mysql （新建表）1/  habase(新建表)1 /        7月6日计划 已建表测试
+o3、 数据库数据采集(外包同事)   
+o4、 HTTP数据采集、IOT数据采集(目前开发中)  
+
+
+http://cityos-dev.jdcityos.com/api/cityos/realsyn/get_relate_api
+
+
+{"flgtNo":"888","updateTime":"20200706","flgtId":"123","id":"amei"}
+
+
+
+ 2020/07/06
+
+1、kafkaAdapter Hbase订阅 ，数据落库成功(之前失败是因为组件服务挂了，重启服务即可),通道运行详情批次数量展示正确(去掉批次数量，实际运行条数+结尾标志消息)
+2、kafkaAdapter mysql订阅，主键校验失败(前端处理)
+3、kafkaAdapter kafka订阅 ，订阅的字段处理规则-- 1  kafakaToKafka--没问题
+
+
+
+
+
+
+
+
